@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./Pics/street.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.h1{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( blue, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-size: large;
+    animation: fadeInUp 1s forwards; 
+}
+
+.women,.robber,.superman{
+    width: 200px;
+    height: 250px;
+    position: absolute;
+}
+.women img{
+    height: 100%;
+    width:auto;
+    position: relative;
+    left: 200px;
+    top: 300px;
+}
+.robber img{
+    height: 100%;
+    width:auto;
+    position: relative;
+    left: 900px;
+    top: 300px;
+    animation: robberAnimation;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+.superman img{
+    height: 100%;
+    width:auto;
+    position: relative;
+    left: 1200px;
+    top: 250px;
+    animation: supermanAnimation;
+    animation-delay: 1s;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+@keyframes robberAnimation{
+    0%{
+        left: 900px;
+    }
+    25%{
+        left: 300px;
+    }
+    50%{
+        left: 300px;
+    }
+    75%{
+        left: 300px;
+    }
+    100%{
+        left: -300px;
+    }
+}
+@keyframes supermanAnimation{
+    0%{
+        left: 1200px;
+    }
+    25%{
+        left: 500px;
+    }
+    50%{
+        left: 300px;
+    }
+    75%{
+        left: 300px;
+    }
+    100%{
+        top:300px;
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
